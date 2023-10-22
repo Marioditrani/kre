@@ -14,18 +14,7 @@
 
 
 <template>
-  <div class="header">
-    <div class="btn-menu" @click="state.openside">Menu</div>
-    <div class="cont">
-      <div class="center">
-        <h1 id="title">Il Capriccio <br> di Leo</h1>
-        <img src="../assets/img/pizza-olio.png" alt="">
-      </div>
-      <div class="par" v-if="state.setting[2].status" >
-        Finalmente un po di riposo anche per noi.. siamo in ferie dal {{ state.setting[2].from }} e torneremo il  {{ state.setting[2].to }}
-      </div>
-    </div>
-    </div>
+  
 </template>
 
 <style lang="scss" scoped>
@@ -51,8 +40,6 @@
 
 }
 .header{
-  background-color: $c-header;
-  margin-left: 2rem;
   height: 40%;
   display: flex;
   align-items: center;

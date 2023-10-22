@@ -32,35 +32,7 @@
       <router-link :to="{ name: 'prenota' }" :class="state.actvPage == 5 ? 'active-link' : '' " class="nav-link" @click="state.updateActvPage(5)" >Ordina d'Asporto</router-link>
       <router-link :to="{ name: 'prenotaServizio' }" :class="state.actvPage == 6 ? 'active-link' : '' " class="nav-link" @click="state.updateActvPage(6)" >Prenota tavolo</router-link>
     </div>
-    <div class="bottom-footer">
-      <div class="sec-1">
-        <h4>Dove puoi trovarci</h4>
-        <p>Borghetto | via borghetto 69</p>
-      </div>
-      <div class="sec-2">
-        <h4>Orari d'apertura</h4>
-        <div class="cont-giorni">
-          <span>lunedì</span>
-          <span>martedì</span>
-          <span>giovedì</span>
-          <span>venerdì</span>
-          <span>sabato</span>
-          <span>domenica</span>
-        </div>
-        <div class="cont-orari">
-          <span class="time" >chiusi</span>         
-          <span class="time" >16:00 - 22:00</span>
-          <span class="time" >16:00 - 22:00</span>
-          <span class="time" >16:00 - 22:00</span>
-          <span class="time" >16:00 - 22:00</span>
-          <span class="time" >16:00 - 22:00</span>
-        </div>
-
-      </div>
-      <div class="sec-3">
-        Capriccio di leo S.r.l, PI: 1231231231231, privacy policy, product by FUTURE+
-      </div>
-    </div>
+    
   </div>
   
   <div :class="state.sideMenuValue ? 'nav-mb-on' : 'nav-mb-off'">
@@ -81,35 +53,7 @@
     <div class="infosideopen" :class="infomenu ? 'infosideopen' : 'infosideclose'">
        
     </div>
-    <div :class="state.sideMenuValue ? 'bottom-footer-on' : 'bottom-footer-off'">
-      <div class="sec-1">
-        <h4>Dove puoi trovarci</h4>
-        <p>Borghetto | via borghetto 69</p>
-      </div>
-      <div class="sec-2">
-        <h4>Orari d'apertura</h4>
-        <div class="cont-giorni">
-          <span>lunedì</span>
-          <span>martedì</span>
-          <span>giovedì</span>
-          <span>venerdì</span>
-          <span>sabato</span>
-          <span>domenica</span>
-        </div>
-        <div class="cont-orari">
-          <span class="time" >chiusi</span>         
-          <span class="time" >16:00 - 22:00</span>
-          <span class="time" >16:00 - 22:00</span>
-          <span class="time" >16:00 - 22:00</span>
-          <span class="time" >16:00 - 22:00</span>
-          <span class="time" >16:00 - 22:00</span>
-        </div>
-
-      </div>
-      <div class="sec-3">
-        Capriccio di leo S.r.l, PI: 1231231231231, privacy policy, product by FUTURE+
-      </div>
-    </div>
+    
   </div>
 </template>
 <!-- 
@@ -130,16 +74,19 @@
   top: 0;
   left: 0;
   bottom: 0;
-  height: 100vh;
-  background-color: $c-nav;
+  height: 96%;
+  background: url("https://static.vecteezy.com/ti/foto-gratuito/p2/2151115-sfondo-legno-verticale-gratuito-foto.jpg");
+  position: absolute;
+  background-repeat: no-repeat;
   width: 30%;
   text-align: center;
+  border: 5px solid white;
   .top{
     @include dfc;
     justify-content: space-around;
     width: 100%;
-    padding: 2rem;
-    height: 60%;
+    padding: 8rem;
+    height: 100%;
     flex-direction: column;
     gap: 2rem;
     
@@ -147,63 +94,13 @@
       max-width: 150px;
       text-transform: uppercase;
       line-height: 2rem;
-      color: $c-nav-link;
       font-family: 'Gabarito', cursive;
       font-size: 1.8rem;
+      
     }
     .active-link{
       color: $c-white;
     }
-  }
-  .bottom-footer *{
-    color: $c-f-t;
-  }
-  .bottom-footer{
-    @include dfa;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-top:25px;
-    text-shadow: 1px 1px 8px black;
-    height: 40%;
-    width: 100%;
-    background-color: $c-footer-nav;
-    .sec-1{
-      @include dfj;
-      flex-direction: column;
-      gap: 1rem;
-      width: 100%;
-    }
-    .sec-2{
-      @include dfj;
-      flex-wrap: wrap;
-      gap: 1rem;
-      width: 100%;
-      justify-content: space-around;
-      h4{
-        
-        width: 100%;
-        
-      }
-      .cont-giorni, .cont-orari{
-        font-size: 11px;
-        @include dfj;
-        flex-direction: column;
-        gap: .5rem;
-        text-align: left;
-        text-transform: uppercase;
-        
-        .time{
-          text-align: center;
-        }
-      }
-
-    }
-    .sec-3{
-      background-color: rgba(0, 0, 0, 0.43);
-      font-size: 8px;
-      padding: 10px;
-    }
-    
   }
 }
 .nav-mb-on{

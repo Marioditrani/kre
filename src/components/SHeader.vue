@@ -15,7 +15,7 @@
 
 <template>
  <header class="hd">
-      <h1>Il Capriccio di Leo</h1>
+      <h1>La Kresceria</h1>
       <div class="btn-menu" @click="state.openside">. . .</div>
     </header>
 </template>
@@ -27,7 +27,7 @@
 @use '../assets/styles/general.scss' as *;
 header{
     padding: 10px 0;
-    background-color: $c-header;
+    border: 5px solid white;
     width: 100%;
     z-index: 1;
     h1{

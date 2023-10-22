@@ -27,30 +27,11 @@
             <div class="par par-1"  v-if="state.setting[0].status">
                 <div class="overlay">
                     <div class="t-c">
-                        <h2 id="h2par1"><span class="s1">ORDINA</span> IL NOSTRO <span class="s2">ASPORTO</span> </h2>
-                        <span>La serata perfetta non esis... E invece esiste eccome! Nasce proprio dal pasto perfetto, quindi che aspetti prenota ora la tua pizza o il tavolo per poterla gustare da noi </span>
+                        <h2 id="h2par1">La Kresceria</h2>
+                        <p>Scopri la qualità unica della nostra crescia marchigiana a cena o assaggia i nostri primi sensazionali a pranzo...</p>
                     </div>
+                    <p>Qui troverai il menu completo della nostra Kresceria... <br> Che aspetti? Ti basta un click!</p>
                     <router-link :to="{ name: 'prenota' }" class="btn" >Prenota asporto</router-link>
-                </div>
-            </div>
-            <div class="par par-2"  v-if="state.setting[1].status">
-            <div class="overlay">
-                <div class="t-c">
-                    <h2 id="h2par2"><span class="s1 s1-m">PRENOTA ORA</span> IL TUO <span class="s2 s2-m">TAVOLO</span></h2>
-                    <span>E se volessi cenare proprio da noi? Prenota subito il tuo tavolo ti aspettiamo a cena da noi!</span>
-                </div>
-                <router-link :to="{ name: 'prenotaServizio' }" class="btn" >Prenota un tavolo</router-link>
-            </div>
-            </div>
-            <div class="par par-3">
-                <div class="overlay">
-                    <div class="t-c">
-                        <h2 id="h2par3">SCOPRI IL NOSTRO MENU</h2>
-                        <span>
-                            Se ancora non hai provato le sfiziosità della nostra cucina devi assolutamente vedere il nostro menù
-                        </span>
-                    </div>
-                    <router-link :to="{ name: 'menu' }" class="btn" >Menù</router-link>
                 </div>
             </div>
         </div>
@@ -95,19 +76,12 @@
     top: 0;
     right: 0;
     overflow: hidden;
-    padding-bottom: 1rem;
-    height: calc(100%);
+    height: 100%;
     .main-home{
-        padding-bottom: 1rem;
-        //margin-bottom: 1rem;
-        overflow-x: scroll;
-        scroll-snap-type: x mandatory;
-        height: 60%;
-        width: calc(100% - 2rem);
-        margin-left: 2rem;
+        height: 96%;
         display: flex;
         gap: 3rem;
-        
+        border: 5px solid white;
         
         .par{
             
@@ -127,29 +101,27 @@
                 bottom: 0;
                 right: 0;
                 left: 0;
-                
                 padding: 2rem;
                 @include dfc;
-                gap: 2rem;
+                flex-direction: column;
                 justify-content: space-between;
+                padding-bottom: 10rem;
                 .t-c{
                     display: flex;
                     flex-direction: column;
                     gap: 1rem;
-                    max-width: 70%;
+                    max-width: 90%;
+                    text-align: center;
+                    padding-top: 4rem;
+                    padding-bottom: 20rem;
                     h2{
                         line-height: 38px;
-                        max-width: 200px;
-                        font-size: 40px;
-                        .s1{
-                            font-size: 115%;
-                            
-                        }
-                        .s2{
-                            font-size: 140%;
-                            
-                        }
+                        font-size: 70px;
+                        font-family: 'Playball', cursive;
                     }
+                }
+                p{
+                    font-size: 30px;
                     
                 }
             }
@@ -158,16 +130,10 @@
     }
 }
 .par-1{
-    background-image: url('../assets/img/pizza-4.png');
+    background-image: url("https://www.ristorantequadrifogliogradara.it/wp-content/uploads/2020/03/crescia-1080x675.jpg");
     background-position: center !important;
 }
-.par-2{
-    background-image: url('../assets/img/pizza-2.png');
-}
-.par-3{
-    background-image: url('../assets/img/pizza-olio.png');
 
-}
 @media (max-width:$bp1) {
     .home{
         padding: 0 !important;
