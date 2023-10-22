@@ -14,10 +14,17 @@
 
 
 <template>
- 
+ <div class="footer">
+aaaaa
+ </div>
 </template>
 
 <style lang="scss" scoped>
 @use '../assets/styles/general.scss' as *;
+.footer{
+  height: 4%;
+  background-color: aliceblue;
+  width: 100%;
+}
 
 </style>

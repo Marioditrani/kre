@@ -113,6 +113,10 @@
   height: 100vh;
   display: flex;
   flex-direction:column;
+  position: fixed;
+    top: 0;
+    left: 0;
+    height: 96%;
 
   .main-about{
     overflow: auto;

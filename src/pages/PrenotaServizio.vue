@@ -284,6 +284,10 @@ export default {
 @use "../assets/styles/general.scss" as *;
 
 .menu{
+  height: 96%;
+  position: fixed;
+    top: 0;
+    left: 0;
   .top-menu{
     h1{
       text-align: center;

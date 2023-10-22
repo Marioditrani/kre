@@ -53,13 +53,12 @@
     <div class="infosideopen" :class="infomenu ? 'infosideopen' : 'infosideclose'">
        
     </div>
+    <div class="footer"></div>
     
   </div>
 </template>
-<!-- 
 
 
-<span>16:00 - 22:00</span> -->
 <style lang="scss" scoped>
 @use '../assets/styles/general.scss' as *;
 .button-nav{
@@ -72,11 +71,12 @@
 .nav{
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   bottom: 0;
   height: 96%;
   background: url("https://static.vecteezy.com/ti/foto-gratuito/p2/2151115-sfondo-legno-verticale-gratuito-foto.jpg");
-  position: absolute;
+  z-index: 20;
+  opacity: .5;
   background-repeat: no-repeat;
   width: 30%;
   text-align: center;

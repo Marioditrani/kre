@@ -8,13 +8,27 @@
     data(){
         return{     
             state,
+            obs: 0,
+            slides:[
+                {image:"https://www.ristorantequadrifogliogradara.it/wp-content/uploads/2020/03/crescia-1080x675.jpg"},
+                {image:"https://images.getbento.com/accounts/22022076ca31682d32e6a3253b8e9e7c/media/images/67494IMG_2648.JPG?w=1200&fit=crop&auto=compress,format&crop=focalpoint&fp-x=0.44&fp-y=0.66"}
+            ]
         }
     },
     created(){
         //axios.get(state.baseUrl + 'api/setting', {}).then(response=> this.state.setting = response.data.results );
    
         this.state.actvPage = 1;
+    },
+    methods:{
+        primaImg(){
+            this.obs = 0
+        },
+        secondaImg(){
+             this.obs = 1
+        },
     }
+
 
   }
 </script>
@@ -23,17 +37,24 @@
     <div class="home">
         <AppHeader class="hd" />
         <div class="main-home">
-            
-            <div class="par par-1"  v-if="state.setting[0].status">
-                <div class="overlay">
-                    <div class="t-c">
-                        <h2 id="h2par1">La Kresceria</h2>
-                        <p>Scopri la qualità unica della nostra crescia marchigiana a cena o assaggia i nostri primi sensazionali a pranzo...</p>
+            <div class="carousel" v-for="(slide, i) in slides" :key="slide">
+                <div class="par par-1" v-if="i == obs" v-bind:class="{'bg1': obs == 0,'bg2': obs == 1,'bg3': obs == 2}"> <!--v-if="state.setting[0].status"-->
+                    <div class="overlay">
+                        <div class="t-c">
+                            <h2 id="h2par1">La Kresceria</h2>
+                            <p>Scopri la qualità unica della nostra crescia marchigiana a cena o assaggia i nostri primi sensazionali a pranzo...</p>
+                        </div>
+                        <p>Qui troverai il menu completo della nostra Kresceria... <br> Che aspetti? Ti basta un click!</p>
+                        <router-link :to="{ name: 'prenota' }" class="btn" >Prenota asporto</router-link>
+                        <div class="carousel-btn">
+                            <div class="btn-c" :class="obs == 0 ? 'btn-active' : ''" @click="primaImg"></div>
+                            <div class="btn-c" :class="obs == 1 ? 'btn-active' : ''" @click="secondaImg"></div>
+                            <div class="btn-c"></div>
+                        </div>
                     </div>
-                    <p>Qui troverai il menu completo della nostra Kresceria... <br> Che aspetti? Ti basta un click!</p>
-                    <router-link :to="{ name: 'prenota' }" class="btn" >Prenota asporto</router-link>
                 </div>
             </div>
+            <Appfooter class="ft" />
         </div>
 
     </div>
@@ -42,6 +63,9 @@
 
 <style scoped lang="scss">
 @use '../assets/styles/general.scss' as *;
+.ft{
+    
+}
 
 *{
     font-family: 'Gabarito', cursive;
@@ -74,17 +98,24 @@
 .home{
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     overflow: hidden;
     height: 100%;
+
     .main-home{
         height: 96%;
-        display: flex;
+        //display: flex;
         gap: 3rem;
         border: 5px solid white;
         
+        .carousel{
+        height: 100%;
+        width: 100%;
+        
+        gap: 3rem;
+        
+        }
         .par{
-            
             scroll-snap-align: start;
             flex: 1 0 auto;
             height: 100%;
@@ -119,11 +150,28 @@
                         font-size: 70px;
                         font-family: 'Playball', cursive;
                     }
+                    
+                }
+                .carousel-btn{
+                    display: flex;
+                    gap: 1rem;
+                    
+                    .btn-c{
+                        padding: 10px;
+                        border-radius: 50%;
+                        background-color: black;
+                        
+                    }
+                    .btn-active{
+                        border: 2px solid white;
+                    }
                 }
                 p{
                     font-size: 30px;
                     
                 }
+                
+
             }
 
         }

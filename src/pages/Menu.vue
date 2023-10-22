@@ -144,9 +144,12 @@
 
 .menu{
   overflow: hidden;
-  height: 100vh;
+  height: 96%;
   display: flex;
   flex-direction: column;
+  position: fixed;
+    top: 0;
+    left: 0;
 
   .menu-cont{
     overflow: auto;
