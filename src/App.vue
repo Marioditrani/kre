@@ -12,6 +12,7 @@
 
   <div class="container">
     <AppNav />
+    <Appfooter />
     <router-view class="page"></router-view>
   </div>
  

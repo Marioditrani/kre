@@ -15,7 +15,7 @@
 
 <template>
  <div class="footer">
-aaaaa
+<p>asfsfa</p>
  </div>
 </template>
 
@@ -23,11 +23,14 @@ aaaaa
 @use '../assets/styles/general.scss' as *;
 .footer{
   height: 4%;
-  background-color: aliceblue;
   width: 100%;
   position: fixed;
   bottom: 0;
   left: 0;
+
+  p{
+    color: grey;
+  }
 }
 
 </style>

@@ -10,8 +10,9 @@
             state,
             obs: 0,
             slides:[
-                {image:"https://www.ristorantequadrifogliogradara.it/wp-content/uploads/2020/03/crescia-1080x675.jpg"},
-                {image:""}
+                "https://www.ristorantequadrifogliogradara.it/wp-content/uploads/2020/03/crescia-1080x675.jpg",
+                "https://th.bing.com/th/id/OIP.ur3rFKWe-tQHnEOvzQbTkgHaE8?pid=ImgDet&rs=1"
+                
             ]
         }
     },
@@ -38,7 +39,7 @@
         <AppHeader class="hd" />
         <div class="main-home">
             <div class="carousel" v-for="(slide, i) in slides" :key="slide">
-                <div class="par par-1" v-if="i == obs" v-bind:class="{'bg1': obs == 0,'bg2': obs == 1,'bg3': obs == 2}"> <!--v-if="state.setting[0].status"-->
+                <div class="par par-1" v-if="i == obs"  > <!--v-if="state.setting[0].status"-->
                     <div class="overlay">
                         <div class="t-c">
                             <h2 id="h2par1">La Kresceria</h2>
@@ -54,9 +55,7 @@
                     </div>
                 </div>
             </div>
-            <div class="footer">
-                <p>La Kresceria 123123123 │ privacy policy │ credit │ powered by future + </p>
-            </div>
+            <Appfooter />
         </div>
 
     </div>
@@ -65,6 +64,8 @@
 
 <style scoped lang="scss">
 @use '../assets/styles/general.scss' as *;
+
+
 
 *{
     font-family: 'Gabarito', cursive;
@@ -179,7 +180,7 @@
     }
 }
 .par-1{
-    background-image: url("https://www.ristorantequadrifogliogradara.it/wp-content/uploads/2020/03/crescia-1080x675.jpg");
+    
     background-position: center !important;
 }
 .footer{
