@@ -75,13 +75,15 @@
   bottom: 0;
   height: 96%;
   background: url("https://static.vecteezy.com/ti/foto-gratuito/p2/2151115-sfondo-legno-verticale-gratuito-foto.jpg");
+  background-position: center !important;
   z-index: 20;
-  opacity: .5;
+  
   background-repeat: no-repeat;
   width: 30%;
   text-align: center;
   border: 5px solid white;
   .top{
+    background: linear-gradient(rgba(0, 0, 0, 0.700), rgba(0, 0, 0, 0.700));
     @include dfc;
     justify-content: space-around;
     width: 100%;

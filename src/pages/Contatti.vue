@@ -44,6 +44,9 @@
         </a>
       </div>
     </div>
+    <div class="footer">
+                <p>La Kresceria 123123123 │ privacy policy │ credit │ powered by future + </p>
+            </div>
   </div>
 </template>
 
@@ -128,6 +131,20 @@ img{
   left: 10px;
   top: 0px;
 
+}
+.footer{
+    height: 4%;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p{
+        color: gray;
+    }
+    
 }
 @media (max-width:$bp1) {.btn-menu{display:block;}}
 

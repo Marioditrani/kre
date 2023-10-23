@@ -11,7 +11,7 @@
             obs: 0,
             slides:[
                 {image:"https://www.ristorantequadrifogliogradara.it/wp-content/uploads/2020/03/crescia-1080x675.jpg"},
-                {image:"https://images.getbento.com/accounts/22022076ca31682d32e6a3253b8e9e7c/media/images/67494IMG_2648.JPG?w=1200&fit=crop&auto=compress,format&crop=focalpoint&fp-x=0.44&fp-y=0.66"}
+                {image:""}
             ]
         }
     },
@@ -54,7 +54,9 @@
                     </div>
                 </div>
             </div>
-            <Appfooter class="ft" />
+            <div class="footer">
+                <p>La Kresceria 123123123 │ privacy policy │ credit │ powered by future + </p>
+            </div>
         </div>
 
     </div>
@@ -63,9 +65,6 @@
 
 <style scoped lang="scss">
 @use '../assets/styles/general.scss' as *;
-.ft{
-    
-}
 
 *{
     font-family: 'Gabarito', cursive;
@@ -153,6 +152,7 @@
                     
                 }
                 .carousel-btn{
+                    
                     display: flex;
                     gap: 1rem;
                     
@@ -165,6 +165,7 @@
                     .btn-active{
                         border: 2px solid white;
                     }
+                    
                 }
                 p{
                     font-size: 30px;
@@ -180,6 +181,20 @@
 .par-1{
     background-image: url("https://www.ristorantequadrifogliogradara.it/wp-content/uploads/2020/03/crescia-1080x675.jpg");
     background-position: center !important;
+}
+.footer{
+    height: 4%;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p{
+        color: gray;
+    }
+    
 }
 
 @media (max-width:$bp1) {

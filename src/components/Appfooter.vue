@@ -25,6 +25,9 @@ aaaaa
   height: 4%;
   background-color: aliceblue;
   width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }
 
 </style>
