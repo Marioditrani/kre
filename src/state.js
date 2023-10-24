@@ -24,44 +24,44 @@ export const state = reactive({
         [
             {
                 img: '../../public/pizza-alto.png',
-                titolo: 'LA REGINA',  
-                ingredienti: 'pomodoro, mozzarella di bufala campana, pesto della casa' ,
+                name: 'LA REGINA',  
+                tags:[{name:'pomodoro'}, {name:'pomodoro'}, {name:'pomodoro'},],
                 prezzo:'8,00€'
             },
             {
                 img: '../../public/pizza-alto.png',
-                titolo: 'PARMIGIANA',  
-                ingredienti: 'pomodoro, mozzarella fior di latte, melanzane grigliate, parmigiano, pesto della casa' ,
+                name: 'PARMIGIANA',  
+                tags:[{name:'pomodoro'}, {name:'pomodoro'}, {name:'pomodoro'},],
                 prezzo:'8,00€'
             },
             {
                 img: '../../public/pizza-alto.png',
-                titolo: 'TRENTINA',  
-                ingredienti: 'mozzarella fior di latte, rucola, carne salada trentina, scaglie di grana' ,
+                name: 'TRENTINA',  
+                tags:[{name:'pomodoro'}, {name:'pomodoro'}, {name:'pomodoro'},],
                 prezzo:'8,00€'
             },
             {
                 img: '../../public/pizza-alto.png',
-                titolo: 'AMATRICIANA',  
-                ingredienti: 'mozzarella fior di latte, salsiccia e pecorino su passata di pomodoro cotta con ventricina piccante, pancetta marchigiana e salsa di peperoncini freschi' ,
+                name: 'AMATRICIANA',  
+                tags:[{name:'pomodoro'}, {name:'pomodoro'}, {name:'pomodoro'},],
                 prezzo:'8,00€'
             },
             {
                 img: '../../public/pizza-alto.png',
-                titolo: 'ACCIUGA',  
-                ingredienti: 'pomodoro, mozzarella di bufala campana, acciughe del mar cantabrico, foglie del cappero, origano' ,
+                name: 'ACCIUGA',  
+                tags:[{name:'pomodoro'}, {name:'pomodoro'}, {name:'pomodoro'},],
                 prezzo:'8,00€'
             },
             {
                 img: '../../public/pizza-alto.png',
-                titolo: 'ARROSTINO',  
-                ingredienti: 'mozzarella fior di latte, stracciatella, rucola, arrosto di tacchino in porchetta marchigiano' ,
+                name: 'ARROSTINO',  
+                tags:[{name:'pomodoro'}, {name:'pomodoro'}, {name:'pomodoro'},],
                 prezzo:'8,00€'
             },
             {
                 img: '../../public/pizza-alto.png',
-                titolo: 'BRONTESE',  
-                ingredienti: 'mozzarella fior di latte, stracciatella di burrata, mortadella, granella di pistacchi e pesto di pistacchi della casa' ,
+                name: 'BRONTESE',  
+                tags:[{name:'pomodoro'}, {name:'pomodoro'}, {name:'pomodoro'},],
                 prezzo:'8,00€'
             },
 
@@ -69,50 +69,50 @@ export const state = reactive({
         [
             {
                 img: '/src/assets/img/pizza-alto.png',
-                titolo: 'MARINARA',  
-                ingredienti: 'pomodoro, origano, aglio' ,
+                name: 'MARINARA',  
+                tags: 'pomodoro, origano, aglio' ,
                 prezzo:'8,00€'
             },
             {
                 img: '/src/assets/img/pizza-alto.png',
-                titolo: 'MARGHERITA',  
-                ingredienti: 'pomodoro, mozzarella fior di latte, basilico' ,
+                name: 'MARGHERITA',  
+                tags: 'pomodoro, mozzarella fior di latte, basilico' ,
                 prezzo:'8,00€'
             },
             {
                 img: '/src/assets/img/pizza-alto.png',
-                titolo: 'SALSICCIA',  
-                ingredienti: 'pomodoro, mozzarella fior di latte, salsiccia' ,
+                name: 'SALSICCIA',  
+                tags: 'pomodoro, mozzarella fior di latte, salsiccia' ,
                 prezzo:'8,00€'
             },
             {
                 img: '/src/assets/img/pizza-alto.png',
-                titolo: 'WÜRSTEL',  
-                ingredienti: 'pomodoro, mozzarella fior di latte, würstel' ,
+                name: 'WÜRSTEL',  
+                tags: 'pomodoro, mozzarella fior di latte, würstel' ,
                 prezzo:'8,00€'
             },
             {
                 img: '/src/assets/img/pizza-alto.png',
-                titolo: 'DIAVOLA',  
-                ingredienti: 'pomodoro, mozzarella fior di latte, ventricina piccante' ,
+                name: 'DIAVOLA',  
+                tags: 'pomodoro, mozzarella fior di latte, ventricina piccante' ,
                 prezzo:'8,00€'
             },
             {
                 img: '/src/assets/img/pizza-alto.png',
-                titolo: 'CAPRICCIOSA',  
-                ingredienti: 'pomodoro, mozzarella fior di latte, carciofini, funghi, olive nere' ,
+                name: 'CAPRICCIOSA',  
+                tags: 'pomodoro, mozzarella fior di latte, carciofini, funghi, olive nere' ,
                 prezzo:'8,00€'
             },
             {
                 img: '/src/assets/img/pizza-alto.png',
-                titolo: '4 STAGIONI',  
-                ingredienti: 'pomodoro, mozzarella fior di latte, carciofini, funghi, olive nere ?? ??' ,
+                name: '4 STAGIONI',  
+                tags: 'pomodoro, mozzarella fior di latte, carciofini, funghi, olive nere ?? ??' ,
                 prezzo:'8,00€'
             },
             {
                 img: '/src/assets/img/pizza-alto.png',
-                titolo: 'LA TEDESCA',  
-                ingredienti: 'pomodoro, mozzarella fior di latte, patate, würstel' ,
+                name: 'LA TEDESCA',  
+                tags: 'pomodoro, mozzarella fior di latte, patate, würstel' ,
                 prezzo:'8,00€'
             },
             
@@ -121,68 +121,68 @@ export const state = reactive({
         [
             {
                 img: '/src/assets/img/pizza-alto.png',
-                titolo: 'FORNARINA',  
-                ingredienti: 'cipolla o rosmarino' ,
+                name: 'FORNARINA',  
+                tags: 'cipolla o rosmarino' ,
                 prezzo:'8,00€'
             },
             {
                 img: '/src/assets/img/pizza-alto.png',
-                titolo: 'CASERECCIA',  
-                ingredienti: 'mozzarella, patate, salsiccia, rosmarino' ,
+                name: 'CASERECCIA',  
+                tags: 'mozzarella, patate, salsiccia, rosmarino' ,
                 prezzo:'8,00€'
             },
             {
                 img: '/src/assets/img/pizza-alto.png',
-                titolo: 'GREEN POWER',  
-                ingredienti: 'mozzarella, verdure di stagione' ,
+                name: 'GREEN POWER',  
+                tags: 'mozzarella, verdure di stagione' ,
                 prezzo:'8,00€'
             },
             {
                 img: '/src/assets/img/pizza-alto.png',
-                titolo: '4 FORMAGG',  
-                ingredienti: 'mozzarella, gorgonzola, pecorino, grana' ,
+                name: '4 FORMAGG',  
+                tags: 'mozzarella, gorgonzola, pecorino, grana' ,
                 prezzo:'8,00€'
             },
             {
                 img: '/src/assets/img/pizza-alto.png',
-                titolo: 'RADICCHIO',  
-                ingredienti: 'mozzarella, radicchio, gorgonzola, noci' ,
+                name: 'RADICCHIO',  
+                tags: 'mozzarella, radicchio, gorgonzola, noci' ,
                 prezzo:'8,00€'
             },
             {
                 img: '/src/assets/img/pizza-alto.png',
-                titolo: 'ADIGE',  
-                ingredienti: 'mozzarella, speck, noci, gorgonzola' ,
+                name: 'ADIGE',  
+                tags: 'mozzarella, speck, noci, gorgonzola' ,
                 prezzo:'8,00€'
             },
             {
                 img: '/src/assets/img/pizza-alto.png',
-                titolo: 'TARTUFATA',  
-                ingredienti: 'mozzarella, cotto, funghi, salsa tartufata' ,
+                name: 'TARTUFATA',  
+                tags: 'mozzarella, cotto, funghi, salsa tartufata' ,
                 prezzo:'8,00€'
             },
             {
                 img: '/src/assets/img/pizza-alto.png',
-                titolo: 'NORCINA',  
-                ingredienti: 'mozzarella fior di latte, salsiccia, salsa tartufata, noci, pecorino' ,
+                name: 'NORCINA',  
+                tags: 'mozzarella fior di latte, salsiccia, salsa tartufata, noci, pecorino' ,
                 prezzo:'8,00€'
             },
             {
                 img: '/src/assets/img/pizza-alto.png',
-                titolo: 'GENOVESE',  
-                ingredienti: 'mozzarella fior di latte, pesto di basilico, pomodorino ciliegino, pinoli' ,
+                name: 'GENOVESE',  
+                tags: 'mozzarella fior di latte, pesto di basilico, pomodorino ciliegino, pinoli' ,
                 prezzo:'8,00€'
             },
             {
                 img: '/src/assets/img/pizza-alto.png',
-                titolo: 'PESTO AFFUMICATO',  
-                ingredienti: 'mozzarella, pesto di basilico, pomodorino giallo, pancetta affumicata' ,
+                name: 'PESTO AFFUMICATO',  
+                tags: 'mozzarella, pesto di basilico, pomodorino giallo, pancetta affumicata' ,
                 prezzo:'8,00€'
             },
             {
                 img: '/src/assets/img/pizza-alto.png',
-                titolo: 'BOSCAIOLA',  
-                ingredienti: 'mozzarella, funghi, pancetta, cipolla, olive nere, pomodorino ciliegino' ,
+                name: 'BOSCAIOLA',  
+                tags: 'mozzarella, funghi, pancetta, cipolla, olive nere, pomodorino ciliegino' ,
                 prezzo:'8,00€'
             },
             

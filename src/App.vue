@@ -1,6 +1,7 @@
 <script >
   
   import AppNav from './components/AppNav.vue'
+  import Appfooter from './components/Appfooter.vue'
 
 
   export default {

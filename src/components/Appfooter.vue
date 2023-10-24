@@ -14,9 +14,7 @@
 
 
 <template>
- <div class="footer">
-<p>asfsfa</p>
- </div>
+<p>gwgw</p>
 </template>
 
 <style lang="scss" scoped>

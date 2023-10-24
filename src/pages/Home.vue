@@ -9,11 +9,6 @@
         return{     
             state,
             obs: 0,
-            slides:[
-                "https://www.ristorantequadrifogliogradara.it/wp-content/uploads/2020/03/crescia-1080x675.jpg",
-                "https://th.bing.com/th/id/OIP.ur3rFKWe-tQHnEOvzQbTkgHaE8?pid=ImgDet&rs=1"
-                
-            ]
         }
     },
     created(){
@@ -28,6 +23,9 @@
         secondaImg(){
              this.obs = 1
         },
+        terzaImg(){
+             this.obs = 2
+        },
     }
 
 
@@ -38,19 +36,53 @@
     <div class="home">
         <AppHeader class="hd" />
         <div class="main-home">
-            <div class="carousel" v-for="(slide, i) in slides" :key="slide">
-                <div class="par par-1" v-if="i == obs"  > <!--v-if="state.setting[0].status"-->
+            <div class="carousel bg1" v-if="obs == 0" >
+                <div class="par par-1"   > <!--v-if="state.setting[0].status"-->
                     <div class="overlay">
                         <div class="t-c">
                             <h2 id="h2par1">La Kresceria</h2>
                             <p>Scopri la qualità unica della nostra crescia marchigiana a cena o assaggia i nostri primi sensazionali a pranzo...</p>
                         </div>
                         <p>Qui troverai il menu completo della nostra Kresceria... <br> Che aspetti? Ti basta un click!</p>
-                        <router-link :to="{ name: 'prenota' }" class="btn" >Prenota asporto</router-link>
+                        <router-link :to="{ name: 'prenota' }"  class="btn" >Prenota asporto</router-link>
                         <div class="carousel-btn">
                             <div class="btn-c" :class="obs == 0 ? 'btn-active' : ''" @click="primaImg"></div>
-                            <div class="btn-c" :class="obs == 1 ? 'btn-active' : ''" @click="secondaImg"></div>
-                            <div class="btn-c"></div>
+                            <div class="btn-c" :class="obs == 1 ? 'btn-active' : ''" @click="secondaImg" v-if="state.setting[0].status" ></div>
+                            <div class="btn-c" :class="obs == 2 ? 'btn-active' : ''" @click="terzaImg" v-if="state.setting[1].status"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel bg2"  v-if="obs == 1 && state.setting[0].status" >
+                <div class="par par-2"   > 
+                    <div class="overlay">
+                        <div class="t-c">
+                            <h2 id="h2par1">La Kresceria</h2>
+                            <p>Scopri la qualità unica della nostra crescia marchigiana a cena o assaggia i nostri primi sensazionali a pranzo...</p>
+                        </div>
+                        <p>Qui troverai il menu completo della nostra Kresceria... <br> Che aspetti? Ti basta un click!</p>
+                        <router-link :to="{ name: 'prenota' }"  class="btn" >Prenota asporto</router-link>
+                        <div class="carousel-btn">
+                            <div class="btn-c" :class="obs == 0 ? 'btn-active' : ''" @click="primaImg"></div>
+                            <div class="btn-c" :class="obs == 1 ? 'btn-active' : ''" @click="secondaImg" v-if="state.setting[0].status"></div>
+                            <div class="btn-c" :class="obs == 2 ? 'btn-active' : ''" @click="terzaImg" v-if="state.setting[1].status"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel bg3" v-if="obs == 2 && state.setting[0].status">
+                <div class="par par-3" > 
+                    <div class="overlay">
+                        <div class="t-c">
+                            <h2 id="h2par1">La Kresceria</h2>
+                            <p>Scopri la qualità unica della nostra crescia marchigiana a cena o assaggia i nostri primi sensazionali a pranzo...</p>
+                        </div>
+                        <p>Qui troverai il menu completo della nostra Kresceria... <br> Che aspetti? Ti basta un click!</p>
+                        <router-link :to="{ name: 'prenota' }" v-if="obs == 2 && state.setting[0].status" class="btn" >Prenota asporto</router-link>
+                        <div class="carousel-btn">
+                            <div class="btn-c" :class="obs == 0 ? 'btn-active' : ''" @click="primaImg"></div>
+                            <div class="btn-c" :class="obs == 1 ? 'btn-active' : ''" @click="secondaImg" v-if="state.setting[0].status" ></div>
+                            <div class="btn-c" :class="obs == 2 ? 'btn-active' : ''" @click="terzaImg" v-if="state.setting[1].status"></div>
                         </div>
                     </div>
                 </div>
@@ -65,6 +97,20 @@
 <style scoped lang="scss">
 @use '../assets/styles/general.scss' as *;
 
+
+
+.carousel.bg1{
+    background-image: url("https://www.ristorantequadrifogliogradara.it/wp-content/uploads/2020/03/crescia-1080x675.jpg");
+    background-size: cover;
+}
+.carousel.bg2{
+    background-image: url("https://i0.wp.com/www.giacomocusano.com/wp-content/uploads/2016/07/coastal-wash-web.jpg?fit=1024%2C682&ssl=1");
+    background-size: cover;
+}
+.carousel.bg3{
+    background-image: url("https://www.ristorantequadrifogliogradara.it/wp-content/uploads/2020/03/crescia-1080x675.jpg");
+    background-size: cover;
+}
 
 
 *{
@@ -112,7 +158,6 @@
         height: 100%;
         width: 100%;
         
-        gap: 3rem;
         
         }
         .par{
@@ -135,6 +180,7 @@
                 padding: 2rem;
                 @include dfc;
                 flex-direction: column;
+                row-gap: 2rem;
                 justify-content: space-between;
                 padding-bottom: 10rem;
                 .t-c{
@@ -158,7 +204,8 @@
                     gap: 1rem;
                     
                     .btn-c{
-                        padding: 10px;
+                        width:25px;
+                        aspect-ratio: 1;
                         border-radius: 50%;
                         background-color: black;
                         

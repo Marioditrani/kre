@@ -98,7 +98,7 @@
   
       <div class="main-menu">
   
-       <div class="card" v-for="item in arrProduct">
+       <div class="card" v-for="item in state.fakemenu[0]">
         <img :src="state.getImageUrl(item.image)" alt="">
         <div class="title">{{ item.name }}</div>
         <div class="c-tp">
