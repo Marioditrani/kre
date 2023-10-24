@@ -98,13 +98,12 @@
   
       <div class="main-menu">
   
-       <div class="card" v-for="item in state.fakemenu[0]">
-        <img :src="state.getImageUrl(item.image)" alt="">
-        <div class="title">{{ item.name }}</div>
-        <div class="c-tp">
-
-          <div class="tags"> <span>{{fixtag(item.tags) }}</span></div>
-          <div class="price">{{ getPrice(item.price) }}</div>
+        <div class="card" v-for="item in state.fakemenu[0]">
+          <div class="title">{{ item.name }}</div>
+          <img src="../assets/img/pizza-alto.png" alt="">         <!--state.getImageUrl(item.image)-->
+          <div class="c-tp">
+            <div class="tags"> <span>{{fixtag(item.tags) }}</span></div>
+            <div class="price">{{ getPrice(item.price) }}</div>
         </div>
        </div>
   
@@ -173,46 +172,54 @@
       flex-wrap: wrap;
       gap: 1rem;
       .card{
-        height: $h-c;
-        width: calc((100% - 2rem) / 2);
-
-        border-radius: $h-c 0 0 $h-c  ;
+        height: 400px;
+        width: calc((75% - 2rem) / 3);
+        padding: 20px;
         position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: flex-end;
         overflow: hidden;
+        align-items: stretch;
         //gap: 1rem;
         //padding: 1rem;
         
+        
         img{
           position: absolute;
-          top: 0;
+          top:0;
           left: 0;
-          height: 100%;
+          right: 0;
+          margin: auto;
           border-radius: $h-c;
+          width: 50%;
+          margin-top: 5rem;
+          
         }
         .title{
-          padding: 1rem;
-          text-align: left;
-          width: calc((100% - $h-c));
-          text-transform: uppercase;
+          padding-bottom: 6rem ;
+          text-align: center;
+          width: 100% ;
+          text-transform: upercase;
           
         }
         .c-tp{
           background-color: #410606;
           border-radius: 10px;
+          padding-top: 50px;
           width: 100%;
           height: 100%;
           display: flex;
           flex-direction: column;
+          padding: 20px;
+          padding-top: 100px;
           justify-content: space-between;
-          align-items: flex-end;
+          
+          
           
           .tags, .price{
             border-radius: 10px;
-            width: calc((100% - $h-c - 15px));
+            width: 100%;
             padding-right: .5rem;
             padding-bottom: .5rem;
           }
@@ -222,7 +229,7 @@
             padding-top: .5rem;
             padding-right: .5rem;
             span{
-              font-size: 10px;
+              font-size: 13px;
               font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
               font-weight: bold!important; 
 
