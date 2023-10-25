@@ -33,10 +33,10 @@ body{
   padding: 0;
 }
 .page{
-    // position: fixed;
-    // top: 0;
-    // right: 0;
-    width: 70%;
+    position: fixed;
+    
+    left: 0;
+    width: 70% !important;
     padding: 0 2rem ;
     overflow: auto;
 }
@@ -44,7 +44,7 @@ body{
 
 @media (max-width:$bp1) {
   .page{
-    width: 100%;
+    width: 100%!important;
   }
   
 }

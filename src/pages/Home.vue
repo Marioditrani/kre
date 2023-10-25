@@ -142,9 +142,6 @@
 }
 .hd{box-shadow: 10px 10px 10px black; }
 .home{
-    position: fixed;
-    top: 0;
-    left: 0;
     overflow: hidden;
     height: 100%;
 

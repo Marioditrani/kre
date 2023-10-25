@@ -349,6 +349,9 @@ export default {
 
 @media (max-width:$bp1) {.prenota{ width: 100% !important;}}
 .prenota{
+  position: fixed;
+    top: 0;
+    left: 0;
   overflow: hidden;
   height: 100vh;
   display: flex;

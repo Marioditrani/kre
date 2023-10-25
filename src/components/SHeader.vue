@@ -59,5 +59,3 @@ header{
   }
   @media (max-width:$bp1) {.btn-menu{display:block !important;}}
 </style>
-
-

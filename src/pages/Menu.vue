@@ -111,6 +111,7 @@
     </div>
     
   </div>
+  <Appfooter />
 </template>
 
 <style scoped lang="scss">
@@ -143,13 +144,15 @@
 .hd{box-shadow: 10px 10px 10px black; }
 
 .menu{
+  width: 70%;
   overflow: hidden;
-  height: 96%;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction:column;
   position: fixed;
     top: 0;
     left: 0;
+    height: 96%;
 
   .menu-cont{
     overflow: auto;
@@ -169,47 +172,48 @@
       @include dfc;
       flex-wrap: wrap;
       gap: 1rem;
+      align-items: stretch;
       .card{
-        height: 400px;
+        background-color: #410606;
+        border-radius: 10px;
         width: calc((75% - 2rem) / 3);
         padding: 20px;
         position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        overflow: hidden;
-        align-items: stretch;
+        margin: 3rem 1rem;
+        margin-bottom: 100px;
         //gap: 1rem;
         //padding: 1rem;
         
         
         img{
           position: absolute;
-          top:0;
+          top: -75px;
           left: 0;
           right: 0;
           margin: auto;
           border-radius: $h-c;
-          width: 50%;
-          margin-top: 5rem;
+          width: $h-c;
+          
           
         }
         .title{
-          padding-bottom: 6rem ;
           text-align: center;
           width: 100% ;
           text-transform: upercase;
-          
+          position: absolute;
+          left:0;
+          top: -120px;
+          z-index: 2;
         }
         .c-tp{
-          background-color: #410606;
-          border-radius: 10px;
-          padding-top: 50px;
           width: 100%;
           height: 100%;
           display: flex;
           flex-direction: column;
-          padding: 20px;
+          
           padding-top: 100px;
           justify-content: space-between;
           
@@ -314,6 +318,11 @@
 @media (max-width:$bp2) {
   .card{
     width: 95% !important;
+  }
+}
+@media (max-width:$bp1) {
+  .menu{
+    width:100%;
   }
 }
 </style>
