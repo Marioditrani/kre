@@ -14,17 +14,21 @@
 
 
 <template>
-<p>gwgw</p>
+<div class="footer">
+    <p>La Kresceria 123123123 │ privacy policy │ credit │ powered by future + </p>
+</div>
 </template>
 
 <style lang="scss" scoped>
 @use '../assets/styles/general.scss' as *;
 .footer{
-  height: 4%;
+  padding: .7rem;
+  text-align: center;
   width: 100%;
   position: fixed;
   bottom: 0;
   left: 0;
+
 
   p{
     color: grey;

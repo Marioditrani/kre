@@ -5,7 +5,7 @@
 
 
   export default {
-  components:{  AppNav }
+  components:{  AppNav, Appfooter }
   }
 </script>
 
@@ -13,8 +13,8 @@
 
   <div class="container">
     <AppNav />
-    <Appfooter />
     <router-view class="page"></router-view>
+    <Appfooter />
   </div>
  
 
