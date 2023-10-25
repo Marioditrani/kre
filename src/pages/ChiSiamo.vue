@@ -65,10 +65,8 @@
           <img src="../assets/img/farine.png" alt="">
         </div>
       </div>
+      <Appfooter />
     </div>
-    <div class="footer">
-                <p>La Kresceria 123123123 │ privacy policy │ credit │ powered by future + </p>
-            </div>
 </div>
 
    
@@ -183,20 +181,7 @@
     }
   }
 }
-.footer{
-    height: 4%;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    p{
-        color: gray;
-    }
-    
-}
+
 
 @media (max-width:$bp3){
   .post{

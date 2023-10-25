@@ -311,7 +311,7 @@ export default {
       <div class="item cubes"></div>
     </div>
 
-    
+    <Appfooter />
   </template>
   <!-- <form  action="http://127.0.0.1:8000/api/orders" method="POST">
     <button class="g-recaptcha" data-sitekey="6Ld254ooAAAAAPDhJAkgpIIaJe09mlZxpuDULufz" data-callback='onSubmit'
