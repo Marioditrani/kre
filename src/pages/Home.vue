@@ -245,6 +245,15 @@
 @media (max-width:$bp1) {
     .home{
         padding: 0 !important;
+        .main-home{
+            .par{
+                .overlay{
+                    .t-c{
+                        padding-bottom: 3rem;
+                    }
+                }
+            }
+        }
     }
     .main-home{
         padding: 0 !important;
@@ -254,13 +263,16 @@
     .overlay{
         flex-direction: column!important;
     }
-  
+    
     #h2par1, #h2par2, #h2par3
     {
         font-size: 28px;
     }
+    
+    
 }
 @media (max-width:$bp1) {
-
+    
 }
+
 </style>

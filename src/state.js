@@ -44,7 +44,7 @@ export const state = reactive({
             {
                 img: '../../public/pizza-alto.png',
                 name: 'AMATRICIANA',
-                tags: [{ name: 'pomodoro' }, { name: 'pomodoro' }, { name: 'pomodoro' },{ name: 'pomodoro' }, { name: 'pomodoro' }, { name: 'pomodoro' },{ name: 'pomodoro' }, { name: 'pomodoro' }, { name: 'pomodoro' },],
+                tags: [{ name: 'pomodoro' }, { name: 'pomodoro' }, { name: 'pomodoro' }, { name: 'pomodoro' }, { name: 'pomodoro' }, { name: 'pomodoro' }, { name: 'pomodoro' }, { name: 'pomodoro' }, { name: 'pomodoro' },],
                 prezzo: '8,00€'
             },
             {

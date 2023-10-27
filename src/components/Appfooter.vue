@@ -34,5 +34,10 @@
     color: grey;
   }
 }
-
+@media (max-width:$bp1) {
+    p{
+      font-size: 12px;
+      padding: 3px;
+    }
+  }
 </style>
