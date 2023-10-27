@@ -40,6 +40,7 @@ export default {
       });
 
     },
+    
 
     order_validations() {
        this.isValid = true;
@@ -228,20 +229,18 @@ export default {
             id="phone"
           />
           <div v-if="phoneError" id="phoneError">{{ phoneError }}</div>
-        </div>
-      <div>
-      <div class="sec-form nperson">
-        <label for="nperson">Numero ospiti</label>
-        <input
-            v-model="nperson"
-            type="text"
-            onkeypress="return /[0-9]/i.test(event.key)"
-            placeholder="numero ospiti"
-            id="nperson"
-          />
-        <div v-if="npersonError" id="npersonError">{{ npersonError }}</div>
       </div>
-    </div>
+      
+        <div class="sec-form nperson">
+          <label for="nperson">Numero ospiti</label>
+          <div class="person">
+            <div class="meno-person">-</div>
+            <div class="valueperson">{{n_person}}</div>
+            <div class="add-person" @click="addperson" >+</div>
+          </div>
+          <div v-if="npersonError" id="npersonError">{{ npersonError }}</div>
+        </div>
+      
     <div class="sec-form">
       <span>Seleziona una data </span>
       <input type="date" v-model="idate" @input="checkData(idate)" id="">
@@ -339,10 +338,17 @@ export default {
   }
   .sec-form{
     .nperson{
-      
       width: 100%;
     }
   }
+  .person{
+        display: flex;
+        justify-content: space-between;
+      width: 30%;
+      margin: auto;
+      font-size: 20px;
+
+      }
   .btn-send{
     border: 1px solid $c-nav-link;
     background-color: $c-header;

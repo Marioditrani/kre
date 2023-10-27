@@ -48,13 +48,13 @@
       <router-link :to="{ name: 'prenota' }" :class="state.infomenu ? 'menu-off': 'active-link' " class="nav-link" @click="state.updateActvPage(5)" >Ordina d'Asporto</router-link>
       <router-link :to="{ name: 'prenotaServizio' }" :class="state.infomenu ? 'menu-off': 'active-link' " class="nav-link" @click="state.updateActvPage(6)" >Prenota tavolo</router-link>
       <router-link :to="{ name: 'conferma' }" :class="state.infomenu ? 'menu-off': 'active-link' " class="nav-link" @click="state.updateActvPage(6)" >conferma</router-link>
-      <div class="nav-link info" @click="state.infoside" :class="state.infomenu ? 'infoopen' : 'infoclose'">
+      <div class="nav-link info"  :class="state.infomenu ? 'infoopen' : 'infoclose'">
         <div class="top-info">
-          <div class="info-n" :class="state.infomenu ? 'info-on' : 'info-n'">info</div>
+          <div class="info-n" @click="state.infoside" :class="state.infomenu ? 'info-on' : 'info-n'">info</div>
           <div class="info-n" @click="state.infoside" :class="state.infomenu ? 'info-btn' : 'info-n'">+</div>
         </div>
         <div class="infosideopen" :class="state.infomenu ? 'infosideopen' : 'infosideclose'">
-          <div class="info" :class="state.infomenu ? '' : 'infoclose'">
+          <div class="topinfo" :class="state.infomenu ? 'topinfoopen' : 'topinfoclose'">
             <div class="sec-1">
               <h4>Dove puoi trovarci</h4>
               <p>Borghetto | via borghetto 69</p>
@@ -141,7 +141,7 @@ height:100%;
 background-color:$c-footer-nav;
 width:100%;
 justify-content: space-between;
-transition: all 1s linear;
+transition: all 1s linear ;
 }
 .infoclose{
 height: 0%;
@@ -150,12 +150,28 @@ height: 0%;
   padding:20px;
   font-size:40px;
 }
-.infoclose{
+.topinfoclose{
   display:none;
+  opacity: 0;
+  transition-property: opacity;
+  transition-delay: 4s;
 }
-.infosideopen{
-  height: auto;
+.topinfoopen{
   
+ 
+}
+.topinfo{
+  opacity: 1;
+  transition-property: opacity;
+  transition-delay: 4s;
+}
+.infosideclose{
+opacity:0;
+transition-property: opacity;
+  transition-delay: 4s;
+}
+
+.infosideopen{
   text-align:center;
   .sec-1{
       @include dfj;
@@ -163,7 +179,6 @@ height: 0%;
       gap: 1rem;
       width: 100%;
       padding-bottom: 100px;
-
       h4{
         font-size:30px;
         padding-bottom:10px;
@@ -171,6 +186,8 @@ height: 0%;
       p{
         font-size:25px;
       }
+     
+
     }
     .sec-2{
       @include dfj;
@@ -340,27 +357,6 @@ height: 0%;
   .nav{
     display: none;
   }
-  .infoopen{
-    
-        z-index:22;
-    }
-.infosideopen {
-    background-color: $c-footer-nav;
-    width: 100vw;
-    height: 100vh;
-    z-index: 21;
-    position: fixed;
-    top: 0;
-    right: 0;
-    transition: all  linear 0.2s
-    }
-  
-
-
-.infosideclose {
-  transition: all  linear 0.2s ;
-  height: 0;
-}
 }
 </style>
 

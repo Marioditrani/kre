@@ -12,7 +12,7 @@
         }
     },
     created(){
-        //axios.get(state.baseUrl + 'api/setting', {}).then(response=> this.state.setting = response.data.results );
+        axios.get(state.baseUrl + 'api/setting', {}).then(response=> this.state.setting = response.data.results );
    
         this.state.actvPage = 1;
     },
@@ -36,6 +36,7 @@
     <div class="home">
         <AppHeader class="hd" />
         <div class="main-home">
+            <div class="btn-menu" @click="state.openside">. . .</div>
             <div class="carousel bg1" v-if="obs == 0" >
                 <div class="par par-1"   > <!--v-if="state.setting[0].status"-->
                     <div class="overlay">
@@ -150,6 +151,22 @@
         //display: flex;
         gap: 3rem;
         border: 5px solid white;
+
+        .btn-menu{
+            display: none;
+            text-transform: uppercase;
+            background-color: black;
+            color: white;
+            font-weight: bolder;
+            width: fit-content;
+            padding: .1rem 1rem 1rem;
+            border-radius: 0 0 20px 20px ;
+            
+            position: absolute;
+            left: 6px;
+            top: 5px;
+            z-index: 10;
+        }
         
         .carousel{
         height: 100%;
@@ -187,7 +204,7 @@
                     max-width: 90%;
                     text-align: center;
                     padding-top: 4rem;
-                    padding-bottom: 20rem;
+                    padding-bottom: 18rem;
                     h2{
                         line-height: 38px;
                         font-size: 70px;
@@ -271,8 +288,6 @@
     
     
 }
-@media (max-width:$bp1) {
-    
-}
+@media (max-width:$bp1) {.btn-menu{display:block !important;}}
 
 </style>
