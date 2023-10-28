@@ -31,6 +31,7 @@ export default {
       loading: false,
       succes: false,
       DeltaMinuti: 30,
+      nPerson : 0,
     };
   },
   methods: {
@@ -41,6 +42,20 @@ export default {
 
     },
     
+    addperson(){
+      if(this.nPerson == 30){
+        this.nPerson = 30
+      }else{
+        this.nPerson ++
+      }
+    },
+    mperson(){
+      if(this.nPerson == 0){
+        this.nPerson = 0
+      }else{
+        this.nPerson --
+      }
+    },
 
     order_validations() {
        this.isValid = true;
@@ -234,8 +249,8 @@ export default {
         <div class="sec-form nperson">
           <label for="nperson">Numero ospiti</label>
           <div class="person">
-            <div class="meno-person">-</div>
-            <div class="valueperson">{{n_person}}</div>
+            <div class="meno-person" @click="mperson">-</div>
+            <div class="valueperson">{{nPerson}}</div>
             <div class="add-person" @click="addperson" >+</div>
           </div>
           <div v-if="npersonError" id="npersonError">{{ npersonError }}</div>
