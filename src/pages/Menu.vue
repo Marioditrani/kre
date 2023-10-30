@@ -97,7 +97,7 @@
       </div>
   
       <div class="main-menu">
-  
+
         <div class="card" v-for="item in state.fakemenu[0]">
           <div class="title">{{ item.name }}</div>
           <img src="../assets/img/pizza-alto.png" alt="">         <!--state.getImageUrl(item.image)-->
@@ -167,7 +167,7 @@
     
     
     .main-menu{
-      margin-top: 2rem;
+      margin-top: 7rem;
 
       @include dfc;
       flex-wrap: wrap;

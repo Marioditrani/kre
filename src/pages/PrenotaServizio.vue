@@ -19,7 +19,7 @@ export default {
       idate:'',
       timeSlot: "",
       message: "",
-      nperson: "",
+      nperson: 0,
       
       nameError: "",
       phoneError: "",
@@ -31,7 +31,6 @@ export default {
       loading: false,
       succes: false,
       DeltaMinuti: 30,
-      nPerson : 0,
     };
   },
   methods: {
@@ -43,17 +42,17 @@ export default {
     },
     
     addperson(){
-      if(this.nPerson == 30){
-        this.nPerson = 30
+      if(this.nperson == 30){
+        this.nperson = 30
       }else{
-        this.nPerson ++
+        this.nperson ++
       }
     },
     mperson(){
-      if(this.nPerson == 0){
-        this.nPerson = 0
+      if(this.nperson == 0){
+        this.nperson = 0
       }else{
-        this.nPerson --
+        this.nperson --
       }
     },
 
@@ -250,7 +249,8 @@ export default {
           <label for="nperson">Numero ospiti</label>
           <div class="person">
             <div class="meno-person" @click="mperson">-</div>
-            <div class="valueperson">{{nPerson}}</div>
+            <input class="valueperson" v-model="nperson" type="text"
+            onkeypress="return /[0-9]/i.test(event.key)">
             <div class="add-person" @click="addperson" >+</div>
           </div>
           <div v-if="npersonError" id="npersonError">{{ npersonError }}</div>
@@ -356,13 +356,34 @@ export default {
       width: 100%;
     }
   }
+  
   .person{
-        display: flex;
-        justify-content: space-between;
-      width: 30%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 40%;
       margin: auto;
       font-size: 20px;
-
+      
+      gap: .5rem;
+      .meno-person, .add-person{
+        padding: 15px;
+        height: 2rem;
+        width: 2rem;
+        @include dfc;
+        border: 2px solid white;
+        border-radius: 20px;
+      }
+      .valueperson{
+        width: 3rem;
+        height: 3rem;
+        @include dfc;
+        border: 3px solid white;
+        border-radius: 10px;
+        text-align: center;
+        font-size:23px;
+        padding: 5px;
+      }
       }
   .btn-send{
     border: 1px solid $c-nav-link;
@@ -419,9 +440,6 @@ export default {
   background-color: black;
   border: 2px solid white;
 }
-.sub-item-off {
-  display: none;
-}
 .sub-item-on {
   display: inline-block;
 }
@@ -456,14 +474,7 @@ export default {
 
   transition: all linear 0.3s;
 }
-.item-off {
-  gap: 0rem;
-  padding: 0rem;
-  border: 0px solid white;
-  //width: 0px;
-  height: 0;
-  transition: all linear 0.3s;
-}
+
 .icon-cart {
   margin: 1rem;
 }

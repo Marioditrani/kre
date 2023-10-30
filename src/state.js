@@ -19,8 +19,8 @@ export const state = reactive({
     baseUrl: 'http://db.dashboardristorante.it/',
     getImageUrl(image) {
         return image
-            ? this.baseUrl + 'storage/' + image
-            : this.baseUrl + 'storage/default.png';
+            ? this.baseUrl + 'public/storage/' + image
+            : this.baseUrl + 'public/storage/default.png';
     },
     fakemenu: [
         [
