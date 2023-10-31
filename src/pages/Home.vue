@@ -265,8 +265,19 @@
         .main-home{
             .par{
                 .overlay{
+                    row-gap: 3rem;
+                    p{
+                        font-size: 20px;
+                        max-width: 100%;
+                        text-align: center;
+                    }
                     .t-c{
-                        padding-bottom: 3rem;
+                        padding-bottom: 1rem;
+                        max-width: 100%;
+
+                        p{
+                            font-size: 25px;
+                        }
                     }
                 }
             }
