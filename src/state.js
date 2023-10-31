@@ -16,7 +16,7 @@ export const state = reactive({
     ],
     actvPage: 1,
     //baseUrl: 'http://127.0.0.1:8000/',
-    baseUrl: 'http://db.dashboardristorante.it/',
+    baseUrl: 'https://db.dashboardristorante.it/',
     getImageUrl(image) {
         return image
             ? this.baseUrl + 'public/storage/' + image
