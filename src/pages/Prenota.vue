@@ -221,8 +221,8 @@
 
       <div class="card-wrap"  v-for="item in arrProduct" :key="item.id">
         <div class="card">
+          <div class="title">{{ item.name }}</div>
         <img :src="state.getImageUrl(item.image)" alt="">
-        <div class="title">{{ item.name }}</div>
         <div class="c-tp">
           <div class="tags"> <span>{{fixtag(item.tags) }}</span></div>
           <div class="price">{{ getPrice(item.price) }}</div>
@@ -298,22 +298,24 @@
     
     
     .main-prenota{
-      margin-top: 2rem;
+      margin-top: 7rem;
       @include dfc;
       flex-wrap: wrap;
       gap: 1rem;
+      align-items: stretch;
       .card-wrap{
-        position: relative;
-        width: calc((100% - 2rem) / 2);
+        width: calc((75% - 2rem) / 3);
         margin-bottom: 60px;
+        @include dfc;
+        align-items: stretch;
         .add{
-            position: absolute;
-            //background-color: red;
-            bottom: -40px;
-            left: 0;
-            width: 100%;
-            @include dfc;
-            gap: 2rem;
+          position: absolute;
+          //background-color: red;
+          bottom: -50px;
+          left: 0;
+          width: 100%;
+          @include dfc;
+          gap: 2rem;
             .sec{
               @include dfc;
               gap: .5rem;
@@ -337,59 +339,62 @@
           }
 
         .card{
-          height: $h-c;
-  
-          border-radius: $h-c 0 0 $h-c  ;
-          position: relative;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: flex-end;
-          //overflow: hidden;
-          //gap: 1rem;
-          //padding: 1rem;
+          width: 100%;
+          background-color: #410606;
+        border-radius: 10px;
+        padding: 20px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 4rem 1rem;
+        margin-bottom: 130px;
           
           img{
             position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            border-radius: $h-c;
+          top: -75px;
+          left: 0;
+          right: 0;
+          margin: auto;
+          border-radius: $h-c;
+          width: $h-c;
           }
           .title{
-            padding: 1rem;
-            text-align: left;
-            width: calc((100% - $h-c));
-            text-transform: uppercase;
-            
+            text-align: center;
+          width: 100% ;
+          text-transform: upercase;
+          position: absolute;
+          left:0;
+          top: -120px;
+          z-index: 2;
           }
           .c-tp{
-            background-color: #410606;
-            border-radius: 10px;
             width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: flex-end;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          
+          padding-top: 100px;
+          justify-content: space-between;
+          
+          
             
             .tags, .price{
               border-radius: 10px;
-              width: calc((100% - $h-c - 15px));
-              padding-right: .5rem;
-              padding-bottom: .5rem;
+            width: 100%;
+            padding-right: .5rem;
+            padding-bottom: .5rem;
             }
             .tags{
   
               display: flex;
-              padding-top: .5rem;
-              padding-right: .5rem;
-              span{
-                font-size: 10px;
-                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-                font-weight: bold!important; 
-                text-transform:capitalize;
-  
+            padding-top: .5rem;
+            padding-right: .5rem;
+            span{
+              font-size: 13px;
+              font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+              font-weight: bold!important; 
+
   
               }
             }
