@@ -301,7 +301,7 @@
       margin-top: 7rem;
       @include dfc;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 3rem;
       align-items: stretch;
       .card-wrap{
         width: calc((75% - 2rem) / 3);
@@ -311,7 +311,7 @@
         .add{
           position: absolute;
           //background-color: red;
-          bottom: -50px;
+          bottom: -70px;
           left: 0;
           width: 100%;
           @include dfc;
@@ -538,8 +538,25 @@
 
 
 @media (max-width:$bp2) {
-  .card{
+  .card-wrap{
     width: 95% !important;
+  }
+  .add{
+        flex-direction: row;
+  }
+}
+@media (max-width:$bp1) {
+  .menu{
+    width:100%;
+  }
+  
+}
+@media (max-width:1600px) {
+  .add{
+    flex-direction: column;
+    gap: 1rem;
+    bottom: -100px;
+    left: 0;
   }
 }
 </style>

@@ -22,7 +22,7 @@
 <style lang="scss" scoped>
 @use '../assets/styles/general.scss' as *;
 .footer{
-  padding: .3rem;
+  padding: .5rem;
   text-align: center;
   width: 100%;
   position: fixed;
