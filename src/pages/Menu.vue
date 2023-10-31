@@ -168,7 +168,6 @@
     
     .main-menu{
       margin-top: 7rem;
-
       @include dfc;
       flex-wrap: wrap;
       gap: 1rem;
