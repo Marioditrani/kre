@@ -36,7 +36,7 @@
 }
 @media (max-width:$bp1) {
     p{
-      font-size: 11px;
+      font-size: 7px;
       padding: 3px;
     }
   }
