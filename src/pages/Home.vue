@@ -144,7 +144,7 @@
 .hd{box-shadow: 10px 10px 10px black; }
 .home{
     overflow: hidden;
-    height: 100%;
+    
 
     .main-home{
         height: 96%;
