@@ -351,13 +351,14 @@
         margin-bottom: 130px;
           
           img{
-            position: absolute;
+          position: absolute;
           top: -75px;
           left: 0;
           right: 0;
           margin: auto;
           border-radius: $h-c;
           width: $h-c;
+          aspect-ratio: 1;
           }
           .title{
             text-align: center;
@@ -554,8 +555,8 @@
 @media (max-width:1600px) {
   .add{
     flex-direction: column;
-    gap: 1rem;
-    bottom: -100px;
+    gap: 1rem!important;
+    bottom: -90px!important;
     left: 0;
   }
 }

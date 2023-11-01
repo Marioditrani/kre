@@ -43,17 +43,17 @@ header{
       display: none;
       
       text-transform: uppercase;
-      background-color: $c-footer-nav;
-      color: $c-nav-link;
+      background-color: black;
+      color: white;
       font-weight: bolder;
       width: fit-content;
       padding: .1rem 1rem 1rem;
       border-radius: 0 0 20px 20px ;
       
       position: absolute;
-      left: 6px;
-      top: 0px;
-      z-index: 10;
+      left: 10px;
+      top: 5px;
+      z-index: 20;
     }
     
   }
