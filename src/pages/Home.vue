@@ -144,10 +144,10 @@
 .hd{box-shadow: 10px 10px 10px black; }
 .home{
     overflow: hidden;
-    
+    height:100%;
 
     .main-home{
-        height: 96%;
+        height: 100%;
         //display: flex;
         gap: 3rem;
         border: 5px solid white;
@@ -160,8 +160,7 @@
             font-weight: bolder;
             width: fit-content;
             padding: .1rem 1rem 1rem;
-            border-radius: 0 0 20px 20px ;
-            
+            border-radius: 0 0 20px 20px;
             position: absolute;
             left: 6px;
             top: 5px;
@@ -186,12 +185,8 @@
             position: relative;
             .overlay{
                 background: linear-gradient(rgba(0, 0, 0, 0.832), rgba(0, 0, 0, 0.359));
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                right: 0;
-                left: 0;
                 padding: 2rem;
+                height:  100%;
                 @include dfc;
                 flex-direction: column;
                 row-gap: 2rem;

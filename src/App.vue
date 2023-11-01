@@ -28,17 +28,18 @@ body{
 }
 
 .container{
+  height: 100vh;
   display: flex;
-  justify-content: flex-end;
-  padding: 0;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .page{
-    position: fixed;
-    
-    left: 0;
     width: 70% !important;
     padding: 0 2rem ;
     overflow: auto;
+    position: relative;
+    z-index: 10;
+  
 }
 
 
