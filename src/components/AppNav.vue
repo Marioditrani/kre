@@ -50,7 +50,7 @@
       <router-link :to="{ name: 'conferma' }" :class="state.infomenu ? 'menu-off': 'active-link' " class="nav-link" @click="state.updateActvPage(6)" >conferma</router-link>
       <div class="nav-link info"  :class="state.infomenu ? 'infoopen' : 'infoclose'">
         <div class="top-info">
-          <div class="info-n" @click="state.infoside" :class="state.infomenu ? 'info-on' : 'info-n'">info</div>
+          <div class="info-n" @click="state.infoside" :class="state.infomenu ? 'info-on' : 'info-n'">infoa</div>
           <div class="info-n" @click="state.infoside" :class="state.infomenu ? 'info-btn' : 'info-n'">+</div>
         </div>
         <div class="infosideopen" :class="state.infomenu ? 'infosideopen' : 'infosideclose'">
