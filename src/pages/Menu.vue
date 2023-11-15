@@ -2,9 +2,10 @@
   import {state} from '../state.js';
   import axios from 'axios'
   import sh from '../components/SHeader.vue'
+  import AppNav from '../components/AppNav.vue'
 
   export default {
-    components:{sh},
+    components:{AppNav},
 
     data(){
         return{     
@@ -86,27 +87,40 @@
 
 <template>
   <div class="menu">
-    <sh/>
+    <AppNav class="nav"/>
     <div class="menu-cont">
-
-      <h1>Menu</h1>
-      <div class="categorie">
-        <div v-for="cat in arrCategory" class="category" :class="actvcat == cat.id ? 'category-on' : '' " @click="changeCategory(cat.id)"> 
-          <span :class="actvcat == cat.id ? 'span-on' : '' ">{{ cat.name }}</span>
-        </div>
+      <div class="menu-left">
+        <img src="src/assets/img/crop.png" alt="" class="bac">
+        
       </div>
-  
-      <div class="main-menu">
-
-        <div class="card" v-for="item in state.fakemenu[0]">
-          <div class="title">{{ item.name }}</div>
-          <img src="../assets/img/pizza-alto.png" alt="">         <!--state.getImageUrl(item.image)-->
-          <div class="c-tp">
-            <div class="tags"> <span>{{fixtag(item.tags) }}</span></div>
-            <div class="price">{{ getPrice(item.price) }}</div>
+      <div class="menu-right">
+        <div class="menu-top">
+          <div class="menu-top-left">
+            <h1>Menu</h1>
+            <p>Le delizie del nostro menu aspettano solo te...</p>
+          </div>
+          <div class="menu-top-right">
+            <div class="categorie">
+              <div v-for="cat in arrCategory" class="category" :class="actvcat == cat.id ? 'category-on' : '' " @click="changeCategory(cat.id)"> 
+                <span :class="actvcat == cat.id ? 'span-on' : '' ">{{ cat.name }}</span>
+              </div>
+            </div>
+            
+          </div>
         </div>
-       </div>
-  
+        <div class="menu-bottom">
+
+          <div class="card" v-for="item in state.fakemenu[0]">
+            <div class="title">{{ item.name }}</div>
+            <img src="../assets/img/imgsushi.png" alt="">         <!--state.getImageUrl(item.image)-->
+            <div class="c-tp">
+              <div class="tags"> <span>{{fixtag(item.tags) }}</span></div>
+              <div class="price">{{ getPrice(item.price) }}</div>
+            </div>
+          </div>
+          
+        </div>
+
       </div>
     </div>
     
@@ -144,76 +158,107 @@
 .hd{box-shadow: 10px 10px 10px black; }
 
 .menu{
-  width: 70%;
+  width: 100%;
   overflow: hidden;
-  height: 100vh;
+  height: 70%;
   display: flex;
   flex-direction:column;
   position: fixed;
-    top: 0;
-    left: 0;
-    height: 96%;
+  top: 0;
+  left: 0;
+  height: 96%;
 
+  .nav{
+    height: 30%;
+  }
   .menu-cont{
-    overflow: auto;
-    height: 100%;
+    display: flex;
+    background-color: #270000;
+    position: fixed;
+    bottom: 0;
+    height: 70%;
+    width: 100%;
     padding: 1rem 1rem ;
-    h1{
-      text-align: center;
-      text-transform: uppercase;
-      padding: 1rem;
-      font-size: 30px;
+
+    .menu-left{
+      width: 10%;
+      display: flex;
+      align-items: center;
+      position: relative;
+      
+      .bac{
+        width: 100%;
+        margin: auto;
+      }
+      
     }
-    
-    
-    .main-menu{
-      margin-top: 7rem;
+
+    .menu-right{
+      width: 90%;
+      .menu-top{
+        height: 30%;
+        display: flex;
+        justify-content: space-between;
+        h1{
+          text-transform: uppercase;
+          font-size: 80px;
+          padding-top: 2rem;
+        }
+        p{
+          font-size: 25px;
+         
+        }
+      }
+      .menu-bottom{
+      height: 72%;
+      overflow: auto;
       @include dfc;
       flex-wrap: wrap;
       gap: 1rem;
       align-items: stretch;
       .card{
-        background-color: #410606;
         border-radius: 10px;
         width: calc((75% - 2rem) / 3);
-        padding: 20px;
+        padding: 10px;
         position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin: 3rem 1rem;
-        margin-bottom: 100px;
-        //gap: 1rem;
-        //padding: 1rem;
+        margin: 15rem 1rem;
+        margin-bottom:0 ;
+        
         
         
         img{
           position: absolute;
-          top: -75px;
+          top: -175px;
           left: 0;
           right: 0;
           margin: auto;
-          border-radius: $h-c;
-          width: $h-c;
+          width: 300px;
           
           
         }
         .title{
-          text-align: center;
+          font-size: 20px;
           width: 100% ;
           text-transform: upercase;
           position: absolute;
-          left:0;
-          top: -120px;
-          z-index: 2;
+          left:40px;
+          top:20px;
+          z-index: 10001;
         }
         .c-tp{
+          background-color: #AB2F2F;
+;
+          position: relative;
+          z-index: 10000;
           width: 100%;
           height: 100%;
           display: flex;
           flex-direction: column;
-          
-          padding-top: 100px;
+          padding: 2rem;
+          border-radius: 20px;
           justify-content: space-between;
           
           
@@ -227,7 +272,7 @@
           .tags{
 
             display: flex;
-            padding-top: .5rem;
+            padding-top: 1rem;
             padding-right: .5rem;
             span{
               font-size: 13px;
@@ -245,6 +290,12 @@
           }
         }
       }
+      }
+    }
+    
+    
+    .main-menu{
+      
 
     }
     

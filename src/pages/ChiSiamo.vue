@@ -20,9 +20,12 @@
 
 <template>
   <div class="about">
-    <sh/>
+    
     <div class="main-about">
-      <h1>LA NOSTRA PIZZERIA</h1>
+      <div class="top-about">
+        <img src="src/assets/img/cuoco-sushi 1.png" alt="">
+        <h1>Chi <br> siamo?</h1>
+      </div>
       <div class="post-container">
         <div class="post">
           
@@ -44,26 +47,8 @@
           </div>
           <img src="../assets/img/abus.png" alt="">
         </div>
-        <div class="post p2">
-          
-          <div class="text">
-            <h4>GLI IMPASTI PIU BUONI E DIGERIBILI</h4>
-            <p>
-              Un impasto digeribile e ben lievitato è il giusto punto di partenza per una pizza sana, genuina e appetitosa. Il Capriccio di Leo è una pizzeria con forno in pietra a Monte San Vito, piccolo centro della provincia di Ancona. 
-            </p>
-          </div>
-          <img src="../assets/img/farine.png" alt="">
-        </div>
-        <div class="post p2">
-          
-          <div class="text">
-            <h4>GLI IMPASTI PIU BUONI E DIGERIBILI</h4>
-            <p>
-            La leggerezza e la genuinità del prodotto, così come la cura riservata alla selezione degli ingredienti e dei condimenti, rendono la pizzeria di Monte San Vito un riferimento anche per chi ha problemi di allergie e intolleranze alimentari.
-            </p>
-          </div>
-          <img src="../assets/img/farine.png" alt="">
-        </div>
+        
+        
       </div>
       <Appfooter />
     </div>
@@ -109,19 +94,30 @@
 }
 
 .about{
+  background-color: #270000;
   overflow: hidden;
-
   display: flex;
   flex-direction:column;
   position: fixed;
-    top: 0;
-    left: 0;
-    height: 96%;
-
+  bottom: 0;
+  left: 0;
+  height: 69%;
+  width: 100%;
   .main-about{
+    margin:auto;
+    width: 70%;
     overflow: auto;
     padding: 2rem;
     height: 100%;
+
+    .top-about{
+      display: flex;
+      h1{
+        font-size: 100px;
+        width: 100%;
+        text-align: center;
+      }
+    }
     .post-container{
       margin-top: 2rem;
       display: flex;

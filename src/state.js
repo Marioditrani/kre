@@ -26,43 +26,43 @@ export const state = reactive({
         [
             {
                 img: '../../public/pizza-alto.png',
-                name: 'LA REGINA',
+                name: 'NOME PIATTO SUSHI',
                 tags: [{ name: 'pomodoro' }, { name: 'pomodoro' }, { name: 'pomodoro' },],
                 prezzo: '8,00€'
             },
             {
                 img: '../../public/pizza-alto.png',
-                name: 'PARMIGIANA',
+                name: 'NOME PIATTO SUSHI',
                 tags: [{ name: 'pomodoro' }, { name: 'pomodoro' }, { name: 'pomodoro' },],
                 prezzo: '8,00€'
             },
             {
                 img: '../../public/pizza-alto.png',
-                name: 'TRENTINA',
+                name: 'NOME PIATTO SUSHI',
                 tags: [{ name: 'pomodoro' }, { name: 'pomodoro' }, { name: 'pomodoro' },],
                 prezzo: '8,00€'
             },
             {
                 img: '../../public/pizza-alto.png',
-                name: 'AMATRICIANA',
+                name: 'NOME PIATTO SUSHI',
                 tags: [{ name: 'pomodoro' }, { name: 'pomodoro' }, { name: 'pomodoro' }, { name: 'pomodoro' }, { name: 'pomodoro' }, { name: 'pomodoro' }, { name: 'pomodoro' }, { name: 'pomodoro' }, { name: 'pomodoro' },],
                 prezzo: '8,00€'
             },
             {
                 img: '../../public/pizza-alto.png',
-                name: 'ACCIUGA',
+                name: 'NOME PIATTO SUSHI',
                 tags: [{ name: 'pomodoro' }, { name: 'pomodoro' }, { name: 'pomodoro' },],
                 prezzo: '8,00€'
             },
             {
                 img: '../../public/pizza-alto.png',
-                name: 'ARROSTINO',
+                name: 'NOME PIATTO SUSHI',
                 tags: [{ name: 'pomodoro' }, { name: 'pomodoro' }, { name: 'pomodoro' },],
                 prezzo: '8,00€'
             },
             {
                 img: '../../public/pizza-alto.png',
-                name: 'BRONTESE',
+                name: 'NOME PIATTO SUSHI',
                 tags: [{ name: 'pomodoro' }, { name: 'pomodoro' }, { name: 'pomodoro' },],
                 prezzo: '8,00€'
             },
