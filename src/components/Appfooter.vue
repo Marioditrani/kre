@@ -22,12 +22,10 @@
 <style lang="scss" scoped>
 @use '../assets/styles/general.scss' as *;
 .footer{
-  padding: .5rem;
+  padding: .7rem;
   text-align: center;
   width: 100%;
-  position: fixed;
-  bottom: 0;
-  left: 0;
+
 
 
   p{
@@ -36,7 +34,7 @@
 }
 @media (max-width:$bp1) {
     p{
-      font-size: 11px;
+      font-size: 10px;
       padding: 3px;
     }
   }

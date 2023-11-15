@@ -82,8 +82,109 @@
 }
 
 .home{
+<<<<<<< HEAD
     background-color: #270000;
     height: 70%;
+=======
+    overflow: hidden;
+    height:100%;
+
+    .main-home{
+        height: 100%;
+        //display: flex;
+        gap: 3rem;
+        border: 5px solid white;
+
+        .btn-menu{
+            display: none;
+            text-transform: uppercase;
+            background-color: black;
+            color: white;
+            font-weight: bolder;
+            width: fit-content;
+            padding: .1rem 1rem 1rem;
+            border-radius: 0 0 20px 20px;
+            position: absolute;
+            left: 6px;
+            top: 5px;
+            z-index: 10;
+        }
+        
+        .carousel{
+        height: 100%;
+        width: 100%;
+        
+        
+        }
+        .par{
+            scroll-snap-align: start;
+            flex: 1 0 auto;
+            height: 100%;
+            width: 100%!important;
+            color: $c-white;
+            //filter: grayscale(50);
+            background-position: center bottom;
+            background-size: cover;
+            position: relative;
+            .overlay{
+                background: linear-gradient(rgba(0, 0, 0, 0.832), rgba(0, 0, 0, 0.359));
+                padding: 2rem;
+                height:  100%;
+                @include dfc;
+                flex-direction: column;
+                row-gap: 2rem;
+                justify-content: space-between;
+                padding-bottom: 10rem;
+                .t-c{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    max-width: 90%;
+                    text-align: center;
+                    padding-top: 4rem;
+                    padding-bottom: 18rem;
+                    h2{
+                        line-height: 38px;
+                        font-size: 70px;
+                        font-family: 'Playball', cursive;
+                    }
+                    
+                }
+                .carousel-btn{
+                    
+                    display: flex;
+                    gap: 1rem;
+                    
+                    .btn-c{
+                        width:25px;
+                        aspect-ratio: 1;
+                        border-radius: 50%;
+                        background-color: black;
+                        
+                    }
+                    .btn-active{
+                        border: 2px solid white;
+                    }
+                    
+                }
+                p{
+                    font-size: 30px;
+                    
+                }
+                
+
+            }
+
+        }
+    }
+}
+.par-1{
+    
+    background-position: center !important;
+}
+.footer{
+    height: 4%;
+>>>>>>> 53b47ff8295b312d6512847b0a1791fb05eaba58
     width: 100%;
     position: fixed;
     bottom: 0;
